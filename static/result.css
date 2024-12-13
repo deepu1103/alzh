@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #000046;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    width: 80px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffb347;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.result-section {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 600px;
+    text-align: center;
+    width: 100%;
+}
+
+.result-section h1 {
+    font-size: 36px;
+    color: #000046;
+    margin-bottom: 20px;
+}
+
+.result-section p {
+    font-size: 24px;
+    color: #555;
+}
+
+.recommendation h2 {
+    margin-top: 30px;
+    font-size: 28px;
+    color: #000046;
+}
+
+.recommendation ul {
+    list-style: square inside;
+    padding: 0;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #666;
+    text-align: left;
+}
+
+.recommendation ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #000046;
+    color: white;
+    padding: 20px;
+    margin-top: auto;
+}

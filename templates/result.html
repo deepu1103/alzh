@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpg') }}" alt="ALZ CARE Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('home_page') }}">Home</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="result-section">
+            <h1>Prediction Result</h1>
+            <p>The predicted diagnosis is: <strong>{{ prediction }}</strong></p>
+            <div class="recommendation">
+                <h2>Recommendations</h2>
+                <ul>
+                    {% for point in recommendations %}
+                        <li>{{ point }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ALZ CARE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

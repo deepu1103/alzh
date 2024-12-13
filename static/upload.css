@@ -1,0 +1,155 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+#font1{
+    font-size: 38px;
+}
+#font{
+    font-size: 30px;
+}
+
+body {
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #000046; /* Dark gradient background */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Slightly enlarges the logo on hover */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #ffb347; /* Highlight color on hover */
+}
+
+/* Main Section Styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 40px;
+}
+
+.upload-section {
+    background: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.upload-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #000046;
+    font-weight: 700;
+}
+
+.upload-section p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+input, textarea, button {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background: #000046;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ffb347; /* Transition color on hover */
+    box-shadow: 0px 6px 20px rgba(255, 179, 71, 0.3); /* Subtle glow on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000046;
+    color: #fff;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Input and Button Hover Effects */
+input:focus, textarea:focus {
+    border-color: #000046;
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 70, 0.2);
+}
+
+input[type="file"] {
+    padding: 0; /* File input doesn't need padding */
+    font-size: 14px;
+}

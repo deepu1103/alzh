@@ -1,0 +1,187 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #000046;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #ffb347;
+}
+
+/* Content Wrapper for equal width boxes */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.about-section, .info-section {
+    width: 48%; /* Ensure equal width for both sections */
+    height: 350px; /* Equal height */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* About Us Section with Flip Effect */
+.about-card {
+    perspective: 1000px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.about-card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-front {
+    background: linear-gradient(135deg, #ffb347, #ffcc99);
+    color: white;
+    font-size: 28px;
+}
+
+.card-back {
+    background: white;
+    transform: rotateY(180deg);
+    color: #333;
+    padding: 40px;
+}
+
+/* Info Section for Why Early Detection Matters */
+.info-section h2 {
+    font-size: 28px;
+    color: #000046;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.detection-benefits {
+    list-style-type: disc;
+    padding-left: 20px; /* Indent the bullet points */
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.detection-benefits li {
+    margin-bottom: 15px;
+}
+
+/* Scan Options Section */
+.scan-options {
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.scan-options h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000046;
+}
+
+.scan-options p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.scan-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.scan-btn {
+    background-color: #000046;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scan-btn:hover {
+    background-color: #ffb347;
+    box-shadow: 0px 6px 20px rgba(255, 179, 71, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000046;
+    color: #fff;
+    width: 100%;
+    margin-top: auto;
+}

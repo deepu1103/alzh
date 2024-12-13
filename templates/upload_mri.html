@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload MRI Scan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='upload.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpg') }}" alt="ALZ CARE Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h1>Upload MRI Scan</h1>
+            <p>Provide details below and upload the MRI scan for the patient's diagnosis.</p>
+            
+            <form action="/upload1" method="POST" enctype="multipart/form-data">
+                <label for="patient-id">Patient ID:</label>
+                <input type="text" id="patient-id" name="patient-id" placeholder="Enter Patient ID" required>
+
+                <label for="scan-date">Scan Date:</label>
+                <input type="date" id="scan-date" name="scan-date" required>
+
+                <label for="comments">Additional Comments (optional):</label>
+                <textarea id="comments" name="comments" placeholder="Add any relevant details about the scan"></textarea>
+
+                <label for="mri-scan">Select MRI Scan:</label>
+                <input type="file" id="mri-scan" name="mri-scan" required>
+
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ALZ CARE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

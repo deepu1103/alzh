@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALZ CARE Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpg') }}" alt="ALZ CARE Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Main Content Wrapper -->
+        <section class="content-wrapper">
+            <!-- About Us Section with Flip Effect -->
+            <div id="about" class="about-section">
+                <div class="about-card">
+                    <div class="card-front">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="card-back">
+                        <p>At ALZ CARE, we specialize in early detection of Alzheimer’s disease through cutting-edge neuroimaging and data-driven analysis. Our mission is to empower patients and caregivers with timely interventions and comprehensive care plans to slow disease progression and improve quality of life.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Early Detection Matters & Key Features -->
+            <div class="info-section">
+                <h2>Why Early Detection Matters</h2>
+                <ul class="detection-benefits">
+                    <li>Proactive treatment strategies that slow disease progression.</li>
+                    <li>Access to personalized care and tailored interventions.</li>
+                    <li>Improved quality of life and better long-term outcomes.</li>
+                    <li>Empowered decision-making for patients and caregivers.</li>
+                    <li>Increased opportunities for clinical trial participation.</li>
+                </ul>
+            </div>
+        </div>
+        </section>
+        
+        <!-- Scan Options Section -->
+        <section class="scan-options">
+            <h2>Choose a Scan Type</h2>
+            <p>Upload an MRI or PET scan to assist with early detection. These scans provide critical insights into brain structure and function, helping assess cognitive decline and detect early signs of Alzheimer’s.</p>
+            <div class="scan-buttons">
+                <a href="{{ url_for('upload_mri') }}" class="scan-btn">Upload MRI Scan</a>
+                <a href="{{ url_for('upload_pet') }}" class="scan-btn">Upload PET Scan</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ALZ CARE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

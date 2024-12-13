@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(7, 153, 132), #00434b); /* Teal gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.logo img {
+    width: 80px; /* Adjust the size to fit */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: rgb(7, 153, 132); /* Teal-green color from logo */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    border-color: rgb(7, 153, 132); /* Teal-green highlight on focus */
+    outline: none;
+}
+
+.login-btn {
+    background-color: rgb(7, 153, 132);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #00434b; /* Darker teal on hover */
+}
+
+.extra-options {
+    margin-top: 20px;
+}
+
+.extra-options a {
+    color: rgb(7, 153, 132);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.extra-options a:hover {
+    text-decoration: underline;
+}
